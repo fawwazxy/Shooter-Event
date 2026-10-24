@@ -1,0 +1,265 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Accent Color */
+:root {
+    --accent-color: #ff6f00; /* Vibrant Orange color for accents */
+}
+
+/* Neumorphic Container Styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #e0e0e0, #f0f0f0);
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+/* Neumorphic Styles */
+.neumorphic {
+    background: #e0e0e0;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Header Styling */
+nav {
+    background-color: var(--accent-color);
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--accent-color);
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #e65100; /* Darker shade of orange on hover */
+    box-shadow: 0 0 5px #e65100;
+    transform: scale(1.05);
+}
+
+/* Page Heading */
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Form Styling */
+form {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+
+form input[type="number"], form input[type="submit"] {
+    width: calc(100% - 24px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    background: #f0f0f0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    background: #f0f0f0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input[type="number"]:focus {
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+form input[type="text"]:focus {
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+form input[type="submit"] {
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #e65100; /* Darker shade of orange on hover */
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f0f0f0;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #333;
+    color: white;
+}
+
+table th, table td {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+table td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Table Rank Styling */
+table td:first-child {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    form {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+form select {
+    width: calc(100% - 24px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    background: #f0f0f0;
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: none; /* Remove the default browser arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="gray" d="M2 0L0 2h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+}
+
+form select:focus {
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Style the options inside the dropdown */
+form select option {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+/* Ensure arrow stays hidden on mobile Safari */
+form select::-ms-expand {
+    display: none;
+}
+
+/* Table Rank Styling */
+table .rank-1 {
+    background-color: yellow;
+}
+
+table .rank-2 {
+    background-color: silver;
+}
+
+table .rank-3 {
+    background-color: #cd7f32; /* Bronze color */
+}
+
+
+
